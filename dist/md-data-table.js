@@ -325,7 +325,6 @@
                 }
             }],
             link: function($scope, element, attrs, ctrl, transclude){
-                element = element[0];
                 $scope.dataStorage = ctrl.dataStorage;
 
                 _injectContentIntoTemplate();
@@ -360,7 +359,7 @@
                             }
                         });
 
-                        var reader = element.querySelector('.mdtTable-reader');
+                        var reader = element[0].querySelector('.mdtTable-reader');
 
                         _.each(headings, function (heading) {
                             reader.appendChild( heading );
@@ -1115,7 +1114,6 @@
                 }
             }],
             link: function($scope, element, attrs, ctrl, transclude){
-                element = element[0];
                 appendColumns();
 
                 ctrl.dataStorage.addRowData($scope.tableRowId, $scope.rowDataStorage);
@@ -1246,7 +1244,6 @@
             scope: false,
             require: '^mdtTable',
             link: function($scope, element, attrs, ctrl){
-                element = element[0];
                 ColumnFilterFeature.initGeneratedHeaderCellContent($scope, $scope.headerRowData, ctrl.mdtPaginationHelper, ctrl.dataStorage);
 
                 $scope.columnClickHandler = function(){
@@ -1298,7 +1295,6 @@
             require: '^mdtTable',
             scope: true,
             link: function($scope, element, attrs, mdtCtrl, transclude){
-                element = element[0]
                 appendColumns();
 
                 function appendColumns(){
@@ -1325,7 +1321,6 @@
                 mdtAddAlignClass: '='
             },
             link: function($scope, element){
-                element = element[0];
                 var classToAdd = ColumnAlignmentHelper.getColumnAlignClass($scope.mdtAddAlignClass);
 
                 element.addClass(classToAdd);
@@ -1346,7 +1341,6 @@
             restrict: 'A',
             require: '^?mdtTable',
             link: function($scope, element, attr, ctrl){
-                element = element[0]
 
                 //for performance reasons we keep the parsedValue over here, since we need to reuse it twice.
                 var parsedValue;
@@ -1404,7 +1398,6 @@
             restrict: 'A',
             scope: false,
             link: function($scope, element){
-                element = element[0];
                 if($scope.animateSortIcon){
                     element.addClass('animate-sort-icon');
                 }
@@ -1670,7 +1663,7 @@
          * (e.g.: when table has only one row to show)
          */
         service.positionColumnFilterBox = function(element){
-            var elementPosition = element.closest('th').offset();
+            var elementPosition = element[0].closest('th').offset();
 
             var targetMetrics = {
                 top: elementPosition.top + 60,
@@ -2045,7 +2038,6 @@
                 headerRowData: '='
             },
             link: function($scope, element){
-                element = element[0];
                 ColumnFilterFeature.positionColumnFilterBox(element);
 
                 $scope.transformChip = transformChip;
@@ -2134,7 +2126,6 @@
                 headerRowData: '='
             },
             link: function($scope, element){
-                element = element[0];
                 ColumnFilterFeature.positionColumnFilterBox(element);
 
                 $scope.transformChip = transformChip;
@@ -2190,7 +2181,6 @@
                 headerRowData: '='
             },
             link: function($scope, element){
-                element = element[0];
                 ColumnFilterFeature.positionColumnFilterBox(element);
 
                 $scope.transformChip = transformChip;
