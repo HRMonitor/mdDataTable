@@ -1377,7 +1377,7 @@
                         });
 
                     }else{
-                        element[0].append(val);
+                        element.append(val);
                     }
 
                 }, false);
@@ -1663,7 +1663,7 @@
          * (e.g.: when table has only one row to show)
          */
         service.positionColumnFilterBox = function(element){
-            var elementPosition = element[0].closest('th').offset();
+            var elementPosition = element.closest('th').offset();
 
             var targetMetrics = {
                 top: elementPosition.top + 60,
