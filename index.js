@@ -1,4 +1,5 @@
 require('angular-material-icons');
+require('./dist/md-data-table-style.css');
 require('./dist/md-data-table-templates.js');
 require('./dist/md-data-table.js');
 
