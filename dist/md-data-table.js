@@ -1716,7 +1716,8 @@
                 cellDataToStore.columnSelectorFeature.isHidden = true;
             }else{
                 cellDataToStore.columnSelectorFeature.isHidden = false;
-            }
+            }			
+            cellDataToStore.columnSelectorFeature.isVisible = !cellDataToStore.columnSelectorFeature.isHidden;
         };
 
         /**
