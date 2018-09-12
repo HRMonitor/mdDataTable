@@ -142,7 +142,7 @@
                 mdtTranslations: '=?',
                 mdtLoadingIndicator: '=?'
             },
-            controller: function mdtTable($scope){
+            controller: function mdtTable($scope, $rootScope){
                 var vm = this;
 
                 $scope.rippleEffectCallback = function(){
@@ -165,6 +165,7 @@
                 // set translations or fallback to a default value
                 function _setDefaultTranslations(){
                     $scope.mdtTranslations = $scope.mdtTranslations || {};
+                    $rootScope.mdtTranslations = $scope.mdtTranslations;
 
                     $scope.mdtTranslations.rowsPerPage = $scope.mdtTranslations.rowsPerPage || 'Rows per page:';
                     $scope.mdtTranslations.cancelButtonLabel = $scope.mdtTranslations.cancelButtonLabel || 'Cancel';
