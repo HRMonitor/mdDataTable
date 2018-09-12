@@ -2,13 +2,13 @@
     <div class="md-whiteframe-z2">
         <md-content class="md-body-1">
             <div layout="row" layout-align="end center" class="b-b p-smd md-caption" ng-if="::headerRowData.columnSort.isEnabled">
-                <a href="#" ng-click="sortingCallback($event, sortingData)">Sort A-Z <mdt-sorting-icons size="20" data="sortingData" class="p-l-sm"></mdt-sorting-icons></a>
+                <a href="#" ng-click="sortingCallback($event, sortingData)">{{$root.mdtTranslations.sortAZLabel}}<mdt-sorting-icons size="20" data="sortingData" class="p-l-sm"></mdt-sorting-icons></a>
             </div>
 
             <div layout="row" layout-align="start center" class="selectall_clearall p-l-md p-t-md p-b-sm">
-                <a href="#" ng-click="selectAll($event)" ng-class="{'disabled' : selectedItems.length === selectableItems.length}">Select all</a> <span>-</span> <a href="#" ng-class="{'disabled' : selectedItems.length === 0}" ng-click="clearAll($event)">Clear</a>
+                <a href="#" ng-click="selectAll($event)" ng-class="{'disabled' : selectedItems.length === selectableItems.length}">{{$root.mdtTranslations.selectAllLabel}}</a> <span>-</span> <a href="#" ng-class="{'disabled' : selectedItems.length === 0}" ng-click="clearAll($event)">{{$root.mdtTranslations.ClearLabel}}</a>
 
-                <div class="selected_items p-r-md" flex ng-if="selectedItems.length">{{selectedItems.length}} Selected</div>
+                <div class="selected_items p-r-md" flex ng-if="selectedItems.length">{{selectedItems.length}} {{selectedItems.length > 1? $root.mdtTranslations.selectedPluralLabel : $root.mdtTranslations.selectedLabel}}</div>
             </div>
 
             <div layout="column" class="p-b-n p-t-sm p-l-md p-r-md filter__scroll">
@@ -22,7 +22,7 @@
 
             <div class="p-b-sm p-t-sm p-l-sm" layout="row" layout-align="start center">
                 <md-button class="md-raised md-primary" ng-click="confirmCallback({selectedItems: selectedItems, sortingData: sortingData, event: $event})">Ok</md-button>
-                <md-button class="md-raised" ng-click="cancelCallback({event: $event})">{{$root.mdtTranslations.cancelButtonLabel}}</md-button>
+                <md-button class="md-raised" ng-click="cancelCallback({event: $event})">{{$root.mdtTranslations.cancelButton}}</md-button>
             </div>
         </md-content>
     </div>

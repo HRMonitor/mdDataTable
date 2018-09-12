@@ -168,11 +168,17 @@
                     $rootScope.mdtTranslations = $scope.mdtTranslations;
 
                     $scope.mdtTranslations.rowsPerPage = $scope.mdtTranslations.rowsPerPage || 'Rows per page:';
-                    $scope.mdtTranslations.cancelButtonLabel = $scope.mdtTranslations.cancelButtonLabel || 'Cancel';
+                    $scope.mdtTranslations.sortAZ = $scope.mdtTranslations.sortAZ || 'Sort A-Z';
+                    $scope.mdtTranslations.selectAll = $scope.mdtTranslations.selectAll || 'Select All';
+                    $scope.mdtTranslations.clear = $scope.mdtTranslations.clear || 'Clear';
+                    $scope.mdtTranslations.selected = $scope.mdtTranslations.selected || 'Selected';
+                    $scope.mdtTranslations.selectedPlural = $scope.mdtTranslations.selectedPlural || 'Selected';
+                    $scope.mdtTranslations.column = $scope.mdtTranslations.column || 'Column';
+                    $scope.mdtTranslations.cancelButton = $scope.mdtTranslations.cancelButton || 'Cancel';
                     $scope.mdtTranslations.pageRowsOfTotalRowsSeparator = $scope.mdtTranslations.pageRowsOfTotalRowsSeparator || 'of';
                     $scope.mdtTranslations.largeEditDialog = $scope.mdtTranslations.largeEditDialog || {};
-                    $scope.mdtTranslations.largeEditDialog.saveButtonLabel = $scope.mdtTranslations.largeEditDialog.saveButtonLabel || 'Save';
-                    $scope.mdtTranslations.largeEditDialog.cancelButtonLabel = $scope.mdtTranslations.largeEditDialog.cancelButtonLabel || 'Cancel';
+                    $scope.mdtTranslations.largeEditDialog.saveButton = $scope.mdtTranslations.largeEditDialog.saveButton || 'Save';
+                    $scope.mdtTranslations.largeEditDialog.cancelButton = $scope.mdtTranslations.largeEditDialog.cancelButton || 'Cancel';
                 }
 
                 // fill storage with values if set
