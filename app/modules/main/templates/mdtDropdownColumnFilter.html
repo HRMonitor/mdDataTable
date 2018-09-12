@@ -17,7 +17,7 @@
 
             <div class="p-b-sm p-t-sm p-l-sm" layout="row" layout-align="start center">
                 <md-button class="md-raised md-primary" ng-click="confirmCallback({selectedItems: selectedItems, sortingData: sortingData, event: $event})">Ok</md-button>
-                <md-button class="md-raised" ng-click="cancelCallback({event: $event})">Cancel</md-button>
+                <md-button class="md-raised" ng-click="cancelCallback({event: $event})">{{mdtTranslations.cancelButtonLabel}}</md-button>
             </div>
         </md-content>
     </div>
