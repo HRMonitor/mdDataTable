@@ -10,7 +10,7 @@
         <md-checkbox aria-label="select all" ng-model="selectAllRows" ng-change="onCheckboxChange()"></md-checkbox>
     </th>
 
-    <th class="column"
+    <th class="column {{ 'column-' + $index }}"
         ng-repeat="headerRowData in dataStorage.header track by $index"
         ng-if="!headerRowData.columnSelectorFeature || headerRowData.columnSelectorFeature.isVisible"
         id="{{'column-header-' + $index }}"
