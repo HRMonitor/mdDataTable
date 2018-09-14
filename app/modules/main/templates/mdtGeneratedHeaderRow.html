@@ -13,6 +13,7 @@
     <th class="column"
         ng-repeat="headerRowData in dataStorage.header track by $index"
         ng-if="!headerRowData.columnSelectorFeature || headerRowData.columnSelectorFeature.isVisible"
+        id="{{'column-header-' + $index }}"
 
         mdt-add-align-class="headerRowData.alignRule"
         ng-click="clickHandler($index, headerRowData)"
